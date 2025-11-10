@@ -37,22 +37,22 @@ weather-forecast-app/<br>
 ## 🚀 How to Run
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/<your-username>/weather-forecast-app.git<br>
-cd weather-forecast-app
+- git clone https://github.com/<your-username>/weather-forecast-app.git
+- cd weather-forecast-app
 ### 2️⃣ Create a virtual environment
 #### Windows
-python -m venv venv<br>
-venv\Scripts\activate<br>
+- python -m venv venv
+- venv\Scripts\activate
 #### macOS/Linux
-python3 -m venv venv<br>
-source venv/bin/activate
+- python3 -m venv venv
+- source venv/bin/activate
 ### 3️⃣ Install dependencies
-pip install -r requirements.txt
+- pip install -r requirements.txt
 ### 4️⃣ Get your OpenWeatherMap API key
-Go to https://openweathermap.org/api<br>
-Sign up (free) and get your API key
+- Go to https://openweathermap.org/api
+- Sign up (free) and get your API key
 ### 6️⃣ Run the app
-python app.py<br>
+- python app.py
 ### Open your browser and visit:
 👉 http://127.0.0.1:5000
 
