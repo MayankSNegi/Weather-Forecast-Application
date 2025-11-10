@@ -20,7 +20,6 @@ It provides **real-time weather** and a **7-day forecast (including today)** for
 
 weather-forecast-app/<br>
 │<br>
-├── venv/ ← Virtual environment<br>
 ├── app.py ← Flask backend<br>
 ├── requirements.txt ← Python dependencies<br>
 │<br>
