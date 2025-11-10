@@ -1,7 +1,18 @@
 # 🌤️ Weather Forecast Web Application
 
 A simple and modern **Weather Forecast App** built using **Flask (Python)** and the **OpenWeatherMap API**.<br>  
-It shows **real-time weather** and a **5-day forecast** for any city with a clean and responsive interface.
+It provides **real-time weather** and a **7-day forecast (including today)** for any city, with a clean and responsive user interface.  
+
+---
+
+## 💡 Features
+
+- ✅ Real-time weather updates
+- ✅ 7-day forecast (including today)
+- ✅ Temperature, humidity, wind, pressure & condition icons
+- ✅ Responsive design with animated weather cards
+- ✅ Error handling for invalid cities and timeouts
+- ✅ Secure key management (API key file ignored by Git)
 
 ---
 
@@ -29,8 +40,8 @@ weather-forecast-app/<br>
 - Frontend: HTML5, CSS3, JavaScript
 - API: OpenWeatherMap (Free Tier)
 - Environment Management: python-dotenv
-- HTTP Requests: requests library
-- Styling: Responsive layout with gradients and animations
+- Data Handling: requests, datetime
+- Security: API key loaded securely from api_key.txt
 
 ---
 
@@ -50,8 +61,16 @@ weather-forecast-app/<br>
 - pip install -r requirements.txt
 ### 4️⃣ Get your OpenWeatherMap API key
 - Go to https://openweathermap.org/api
-- Sign up (free) and get your API key
-### 6️⃣ Run the app
+- Sign up (free)
+- Copy your API key
+### 5️⃣ Create api_key.txt
+- Inside your project folder, create a file named api_key.txt
+- Paste your API key inside it
+### 6️⃣ Update .gitignore
+- Ensure .gitignore includes this line:
+- api_key.txt
+This prevents your secret key from being uploaded to GitHub.
+### 7️⃣ Run the app
 - python app.py
 ### Open your browser and visit:
 👉 http://127.0.0.1:5000

@@ -9,7 +9,13 @@ load_dotenv()
 app = Flask(__name__)
 
 # OpenWeatherMap API Configuration
-API_KEY = os.getenv('OPENWEATHER_API_KEY') or '0a165df04340e937803c84908f357d67'
+# Load API key from file safely
+try:
+    with open('api_key.txt', 'r') as file:
+        API_KEY = file.read().strip()
+except FileNotFoundError:
+    API_KEY = None
+    print("⚠️ API key file not found! Please create 'api_key.txt' with your key.")
 BASE_URL = "https://api.openweathermap.org/data/2.5"
 
 @app.route('/')
