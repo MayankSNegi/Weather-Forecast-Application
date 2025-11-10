@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🌤️ Weather Forecast</h1>
+            <p>Get real-time weather for any city</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="search-input" 
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+            <div id="errorMsg" class="error-message"></div>
+            <div id="loadingMsg" class="loading-message"></div>
+        </div>
+
+        <!-- Current Weather Card -->
+        <div id="currentWeatherContainer" class="current-weather-card hidden">
+            <div class="city-name-section">
+                <h2 id="cityName"></h2>
+                <p id="weatherDescription"></p>
+            </div>
+            <div class="current-weather-content">
+                <div class="temp-section">
+                    <img id="weatherIcon" src="" alt="weather icon" class="weather-icon-large">
+                    <div class="temp-display">
+                        <span id="currentTemp" class="current-temp">--°</span>
+                        <span class="feels-like">Feels like <span id="feelsLike">--</span>°</span>
+                    </div>
+                </div>
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <span class="detail-label">Humidity</span>
+                        <span id="humidity" class="detail-value">--%</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-label">Wind Speed</span>
+                        <span id="windSpeed" class="detail-value">-- m/s</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-label">Pressure</span>
+                        <span id="pressure" class="detail-value">-- hPa</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-label">UV Index</span>
+                        <span id="uvi" class="detail-value">--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7-Day Forecast -->
+        <div id="forecastContainer" class="forecast-container hidden">
+            <h3>7-Day Forecast</h3>
+            <div id="forecastCards" class="forecast-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
